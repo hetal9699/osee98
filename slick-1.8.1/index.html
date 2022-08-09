@@ -1,0 +1,2431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ocee</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="ocee.css">
+    <link rel="stylesheet" href="slick.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row ">
+            <div id="menu"
+                class="menubarwidth  bg-light position-sticky border-end border-1 border-secondary top-0">
+                <button class="btn btn-light my-4 fontsize15 color_darkgray fw-bolder w-50 ms-5" id="menuin" onclick="btnmenufull()"><i
+                        class="fa-solid fa-bars-staggered"></i></button>
+                <button class="btn btn-light my-4 fontsize15 float-end color_darkgray fw-bolder w-50" id="menuback" onclick="btnmenuback()"><i
+                        class="fa-solid fa-arrow-left"></i></button>
+                       
+                <div id="menusingle" class="text-center px-4">
+                    <button class="btn btn-dark fontsize11 rounded-3 my-3 w-75"><i class="fa-solid fa-braille"></i></button>
+
+                    <button class="btn bg-white fontsize11 rounded-3 my-3 w-75 "><i class="fa-solid fa-play"></i></button>
+                    <button class="btn bg-white fontsize11 rounded-3 my-3 w-75 "><i class="fa-solid fa-desktop"></i></button>
+                    <hr>
+                    <button class="btn bg-white fontsize11 rounded-3 my-3 w-75 "><i class="fa-solid fa-info"></i></button>
+
+                    <button class="btn bg-white fontsize11 rounded-3 my-3  w-75"><i class="fa-solid fa-comment-dots"></i></button>
+<hr>
+                </div>
+                <div id="menudetail" class="w-100 m-0 p-0">
+                    <div class="">
+                        <h2 class="fontsize24 fw-bold color_darkgray mt-4">OSee!</h2>
+                        <h4 class="fontsize12 color_lightgray mt-4">
+                            MENU
+                        </h4>
+                        <div class="px-4" >
+                            <div class="my-4">
+                                <button class="btn bg-black  text-white fontsize12  w-25  "><i class="fa-solid fa-braille"></i></button>
+                                <span class="fontsize15 color_darkgray fw-bold ">Home</span>
+    
+                            </div>
+                            <div class="my-4">
+                                <button class="btn bg-white color_darkgray  fontsize13  w-25 "><i class="fa-solid fa-play"></i></button>
+                                <span class="fontsize15 color_lightgray fw-bold">Movies</span>
+    
+                            </div>
+                            <div class="my-4">
+                                <button class="btn bg-white color_darkgray  fontsize13  w-25   "><i class="fa-solid fa-desktop"></i></button>
+                                <span class="fontsize15 color_lightgray fw-bold">TV-shows</span>
+    
+                            </div>
+    
+                            <hr class="my-4">
+                            <h4 class="fontsize12 color_lightgray mt-2 ">MISC</h4>
+                            <div class="my-4">
+                                <button class="btn bg-white color_darkgray  fontsize13  w-25   "><i class="fa-solid fa-info"></i></button> <span class="fontsize15 color_lightgray fw-bold">Help
+                                    Center</span>
+    
+                            </div>
+                            <div class="my-4">
+                                <button class="btn bg-white color_darkgray  fontsize13  w-25   "><i class="fa-solid fa-comment-dots"></i></button>
+                                <span class="fontsize15 color_lightgray fw-bold">Guilded</span>
+    
+                            </div>
+                            <hr class="my-4">
+                            <h4 class="fontsize12 color_lightgray fw-bold ">MY LIST</h4>
+                            <h5 class="fontsize10 color_lightgray ">Log in to view your lists</h5>
+                            <hr class="my-4">
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+            <div id="content" class="contentwidth bg-white p-0">
+
+                <nav class="navbar bgtransperent position-sticky top-0 py-4  zin ">
+                    <div class="container-fluid">
+                        <div class="col-5">
+                            <form class=" d-flex input-group justify-content-between" role="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="search"
+                                        aria-label="Dollar amount (with dot and two decimal places)">
+                                    <span class="input-group-text
+           bg-white
+          "><i class="fa-solid fa-magnifying-glass text-secondary"></i></span>
+
+                                </div>
+                            </form>
+                        </div>
+                        <div>
+                            <button class="btn btn-light p-1 px-2"><i class="fa-solid fa-circle-user"></i></button>
+                            <button class="btn btn-light text-primary p-1 px-2"><i
+                                    class="fa-regular fa-moon"></i></button>
+                        </div>
+
+
+                    </div>
+                </nav>
+                <div id="banner" class="container   ">
+
+                    <h2 class="color_darkgray fontsize30 fw-semibold pt-5 pb-3">Home</h2>
+                    <div class="row">
+                        <div id="banner1" class="col-8 bgblue rounded-5 ">
+                            <div class="row">
+                                <div class="col-8 p-4 ">
+                                    <h2 class="fontsize27 text-white me-5 fw-semibold">Keep track of all the TV shows
+                                        and
+                                        movies you want to watch.</h2>
+                                    <div class="justify-content-evenly">
+                                        <div class="">
+                                            <div class="p-1 border-1 border-white rounded-circle text-center">
+                                                <img src="images/bannerbutton.png"
+                                                    class="playbuttoimg mx-auto rounded-circle pt-2" alt="">
+                                            </div>
+
+                                        </div>
+                                        <div class=" ">
+                                            <p class="p-0 m-0 pt-3 fontsize15 text-white"> Yes,It's all free</p>
+                                            <p class="fontsize15 text-white">HD Quality.cc.Watchlist</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-4 bgimgbanner1 ">
+                                    <div class="justify-content-evenly ">
+                                        <button class="buttonbgcolor fontsize12 text-white rounded-3 border-0">New
+                                            Movies!</button>
+                                        <button class="buttonbgcolor fontsize12 text-white rounded-3 border-0">Adroid
+                                            APP</button>
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div id="banner2" class="col ms-3  bgimgbanner2 rounded-5  bgblue">
+                            <h2 class="fontsize30 text-white fw-semibold">If you like us share our site to your friends
+                            </h2>
+                            <p class="p-0 m-0 pt-3 fontsize15 text-white">Join to our official groups </p>
+                            <p class="fontsize12 text-white">Invite Codes.Freebies.Rewards</p>
+                            <button
+                                class="buttonbgcolor fontsize12 text-white rounded-3 border-0 float-end px-2 mt-5">Twiter</button>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="container">
+                    <h3 class="color_darkgray fontsize24 color_darkgray fw-lighter pt-4 ps-3 ">Now Playing movies</h3>
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row mx-2 py-4">
+                                    <div class="col m-0 p-0">
+                                        <div class="height">
+                                            <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+
+                                        </div>
+                                        
+                                        <div class="color_lightgray color_lightgray fontsize13  ">
+                                            <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                            </p>
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <div class="height">
+                                            <img src="images/movies2.jpg" class="moviebanner rounded-4" alt="">
+
+                                        </div>
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Minions
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 6.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies3.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Thor:love and Thunder
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 8.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies4.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">TOPGUN MAVERIK 
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 5.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies5.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Black Phone
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 4.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies6.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Ligthyear
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row py-4">
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies7.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Black Phone
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 4.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies8.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies9.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies10.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row py-4">
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next ms-5 ps-5" type="button"
+                            data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="container">
+                    <h3 class="color_darkgray fontsize24 color_darkgray fw-lighter pt-4 ps-3 ">Top Thrillers</h3>
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row mx-2 py-4">
+                                    <div class="col m-0 p-0">
+                                        <img src="images/thriller1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Shutter Island
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 4.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/thriller2.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Nobody
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 5.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/thriller3.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Joker
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.0 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/thriller4.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Digimon Adventure
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 2.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/thriller5.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">
+                                            Inglurious Basterds
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 3.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/thriller6.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Inglurious Basterds
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 2.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row py-4">
+                                    <div class="col m-0 p-0">
+                                        <img src="images/thriller7.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/thriller8.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/thriller9.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/thriller10.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row py-4">
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next ms-5 ps-5" type="button"
+                            data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="container">
+                    <h3 class="color_darkgray fontsize24 color_darkgray fw-lighter pt-4 ps-3 ">Top kids</h3>
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row mx-2 py-4">
+                                    <div class="col m-0 p-0">
+                                        <img src="images/sci 1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/sci2.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Lightyear
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 3.5 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/sci3.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Zombies
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 3.0 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/sci4.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Spiderman
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 8.2 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/sci6.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Morbius
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 6.5 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/sci7.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Dragonnball
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.4 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row py-4">
+                                    <div class="col m-0 p-0">
+                                        <img src="images/sci8.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/sci9.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/sci10.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies10.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row py-4">
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next ms-5 ps-5" type="button"
+                            data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="container-fluid m-0 p-0">
+                    <h3 class="color_darkgray fontsize24 color_darkgray fw-lighter pt-4 ps-3 ">Top Sci-fi</h3>
+                    <div class="single-item  d-flex    ms-3">
+
+                        <div class="container-fluid  ">
+                 
+                         <div class="row m-0 py-4">
+                 
+                             <div class="col m-0 p-0 ">
+                                 <div class="height">
+                                     <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                 
+                                 </div>
+                                 
+                                 <div class="color_lightgray color_lightgray fontsize13  ">
+                                     <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                     </p>
+                                     <span>
+                                         2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                     </span>
+                 
+                                     <button
+                                         class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                 </div>
+                 
+                             </div>
+                             <div class="col m-0 p-0">
+                                 <div class="height">
+                                     <img src="images/movies2.jpg" class="moviebanner rounded-4" alt="">
+                 
+                                 </div>
+                                 <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Minions
+                                 </p>
+                                 <div class="color_lightgray color_lightgray fontsize13 ">
+                                     <span>
+                                         2022 6.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                     </span>
+                 
+                                     <button
+                                         class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                 </div>
+                 
+                             </div>
+                             <div class="col m-0 p-0">
+                                 <div class="height">
+                                     <img src="images/movies3.jpg" class="moviebanner rounded-4" alt="">
+                 
+                                 </div>
+                                 <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Thor:love and Thunder
+                                 </p>
+                                 <div class="color_lightgray color_lightgray fontsize13 ">
+                                     <span>
+                                         2022 8.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                     </span>
+                 
+                                     <button
+                                         class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                 </div>
+                 
+                             </div>
+                             <div class="col m-0 p-0">
+                                 <div class="height">
+                                     <img src="images/movies4.jpg" class="moviebanner rounded-4" alt="">
+                 
+                                 </div>
+                                 <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">TOPGUN MAVERIK 
+                                 </p>
+                                 <div class="color_lightgray color_lightgray fontsize13 ">
+                                     <span>
+                                         2022 5.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                     </span>
+                 
+                                     <button
+                                         class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                 </div>
+                 
+                             </div>
+                             <div class="col m-0 p-0">
+                                 <div class="height">
+                                     <img src="images/movies5.jpg" class="moviebanner rounded-4" alt="">
+                 
+                                 </div>
+                                 <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Black Phone
+                                 </p>
+                                 <div class="color_lightgray color_lightgray fontsize13 ">
+                                     <span>
+                                         2022 4.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                     </span>
+                 
+                                     <button
+                                         class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                 </div>
+                 
+                             </div>
+                             <div class="col m-0 p-0">
+                                 <div class="height">
+                                     <img src="images/movies6.jpg" class="moviebanner rounded-4" alt="">
+                 
+                                 </div>
+                                 <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Ligthyear
+                                 </p>
+                                 <div class="color_lightgray color_lightgray fontsize13 ">
+                                     <span>
+                                         2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                     </span>
+                 
+                                     <button
+                                         class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                 </div>
+                 
+                             </div>
+                 
+                 
+                 
+                         </div>
+                 
+                        </div>
+                         <div class="slide">
+                             <div class="container-fluid ms-3 ">
+                                 <div class="row m-0 py-4">
+                 
+                                     <div class="col m-0 p-0 ">
+                                         <div class="height">
+                                             <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                         
+                                         </div>
+                                         
+                                         <div class="color_lightgray color_lightgray fontsize13  ">
+                                             <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                             </p>
+                                             <span>
+                                                 2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                             </span>
+                         
+                                             <button
+                                                 class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                         </div>
+                         
+                                     </div>
+                                     <div class="col m-0 p-0">
+                                         <div class="height">
+                                             <img src="images/movies2.jpg" class="moviebanner rounded-4" alt="">
+                         
+                                         </div>
+                                         <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Minions
+                                         </p>
+                                         <div class="color_lightgray color_lightgray fontsize13 ">
+                                             <span>
+                                                 2022 6.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                             </span>
+                         
+                                             <button
+                                                 class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                         </div>
+                         
+                                     </div>
+                                     <div class="col m-0 p-0">
+                                         <div class="height">
+                                             <img src="images/movies3.jpg" class="moviebanner rounded-4" alt="">
+                         
+                                         </div>
+                                         <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Thor:love and Thunder
+                                         </p>
+                                         <div class="color_lightgray color_lightgray fontsize13 ">
+                                             <span>
+                                                 2022 8.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                             </span>
+                         
+                                             <button
+                                                 class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                         </div>
+                         
+                                     </div>
+                                     <div class="col m-0 p-0">
+                                         <div class="height">
+                                             <img src="images/movies4.jpg" class="moviebanner rounded-4" alt="">
+                         
+                                         </div>
+                                         <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">TOPGUN MAVERIK 
+                                         </p>
+                                         <div class="color_lightgray color_lightgray fontsize13 ">
+                                             <span>
+                                                 2022 5.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                             </span>
+                         
+                                             <button
+                                                 class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                         </div>
+                         
+                                     </div>
+                                     <div class="col m-0 p-0">
+                                         <div class="height">
+                                             <img src="images/movies5.jpg" class="moviebanner rounded-4" alt="">
+                         
+                                         </div>
+                                         <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Black Phone
+                                         </p>
+                                         <div class="color_lightgray color_lightgray fontsize13 ">
+                                             <span>
+                                                 2022 4.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                             </span>
+                         
+                                             <button
+                                                 class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                         </div>
+                         
+                                     </div>
+                                     <div class="col m-0 p-0">
+                                         <div class="height">
+                                             <img src="images/movies6.jpg" class="moviebanner rounded-4" alt="">
+                         
+                                         </div>
+                                         <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Ligthyear
+                                         </p>
+                                         <div class="color_lightgray color_lightgray fontsize13 ">
+                                             <span>
+                                                 2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                             </span>
+                         
+                                             <button
+                                                 class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                         </div>
+                         
+                                     </div>
+                         
+                         
+                         
+                                 </div>
+                 
+                             </div>
+                             
+                         </div>
+                         <div class="slide">
+                             <div class="container-fluid ms-3">
+                                 <div class="row m-0 py-4">
+                 
+                                     <div class="col m-0 p-0 ">
+                                         <div class="height">
+                                             <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                         
+                                         </div>
+                                         
+                                         <div class="color_lightgray color_lightgray fontsize13  ">
+                                             <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                             </p>
+                                             <span>
+                                                 2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                             </span>
+                         
+                                             <button
+                                                 class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                         </div>
+                         
+                                     </div>
+                                     <div class="col m-0 p-0">
+                                         <div class="height">
+                                             <img src="images/movies2.jpg" class="moviebanner rounded-4" alt="">
+                         
+                                         </div>
+                                         <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Minions
+                                         </p>
+                                         <div class="color_lightgray color_lightgray fontsize13 ">
+                                             <span>
+                                                 2022 6.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                             </span>
+                         
+                                             <button
+                                                 class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                         </div>
+                         
+                                     </div>
+                                     <div class="col m-0 p-0">
+                                         <div class="height">
+                                             <img src="images/movies3.jpg" class="moviebanner rounded-4" alt="">
+                         
+                                         </div>
+                                         <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Thor:love and Thunder
+                                         </p>
+                                         <div class="color_lightgray color_lightgray fontsize13 ">
+                                             <span>
+                                                 2022 8.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                             </span>
+                         
+                                             <button
+                                                 class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                         </div>
+                         
+                                     </div>
+                                     <div class="col m-0 p-0">
+                                         <div class="height">
+                                             <img src="images/movies4.jpg" class="moviebanner rounded-4" alt="">
+                         
+                                         </div>
+                                         <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">TOPGUN MAVERIK 
+                                         </p>
+                                         <div class="color_lightgray color_lightgray fontsize13 ">
+                                             <span>
+                                                 2022 5.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                             </span>
+                         
+                                             <button
+                                                 class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                         </div>
+                         
+                                     </div>
+                                     <div class="col m-0 p-0">
+                                         <div class="height">
+                                             <img src="images/movies5.jpg" class="moviebanner rounded-4" alt="">
+                         
+                                         </div>
+                                         <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Black Phone
+                                         </p>
+                                         <div class="color_lightgray color_lightgray fontsize13 ">
+                                             <span>
+                                                 2022 4.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                             </span>
+                         
+                                             <button
+                                                 class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                         </div>
+                         
+                                     </div>
+                                     <div class="col m-0 p-0">
+                                         <div class="height">
+                                             <img src="images/movies6.jpg" class="moviebanner rounded-4" alt="">
+                         
+                                         </div>
+                                         <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Ligthyear
+                                         </p>
+                                         <div class="color_lightgray color_lightgray fontsize13 ">
+                                             <span>
+                                                 2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                             </span>
+                         
+                                             <button
+                                                 class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                         </div>
+                         
+                                     </div>
+                         
+                         
+                         
+                                 </div>
+                             </div>
+                 
+                            
+                 
+                         </div>
+                         
+                 
+                     </div>
+
+                </div>
+                <div class="container">
+                    <h3 class="color_darkgray fontsize24 color_darkgray fw-lighter pt-4 ps-3 ">Top Horrors</h3>
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row mx-2 py-4">
+                                    <div class="col m-0 p-0">
+                                        <img src="images/horror1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Black Phone
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 6.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/horror2.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">The Exorcism Of God
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 8.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/horror3.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Valley of the dead
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 8.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/horror4.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Shutin
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 3.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/horror5.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Incantation
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 5.5 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/horror6.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold"> The Passenger
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 9.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row py-4">
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies7.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies8.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies9.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies10.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row py-4">
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next ms-5 ps-5" type="button"
+                            data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="container">
+                    <div class="row bgblue rounded-5">
+                        <div class="col-4 p-5">
+                            <h2 class="fontsize30 text-white fw-semibold">Keep updated what's happening!
+                            </h2>
+                            <p class="p-0 m-0 text-white fontsize15">
+                                All the info are here
+                            </p>
+                            <p class="p-0 m-0 text-white fontsize10">
+                                Announcement Fix & Issues and More
+                            </p>
+
+                        </div>
+                        <div class="col bgimgbanner3 ">
+                            <button
+                                class="buttonbgcolor fontsize12 text-white px-2 py-1 float-end position-relative top-50 mt-5 rounded-3 border-0">Discord</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="container">
+                    <h3 class="color_darkgray fontsize24 color_darkgray fw-lighter pt-4 ps-3 ">Now airing TV shows</h3>
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row mx-2 py-4">
+                                    <div class="col m-0 p-0">
+                                        <img src="images/tvshows1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Vive Le Velo
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.3 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/tvshows2.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Too Good Too Be True
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 3.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/tvshows3.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Pantanal
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 10.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/tvshows4.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Cara E Coragem
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 4.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/tvshows5.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Love In 40 Days
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 4.3 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/tvshows6.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Love In 40 Days
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 4.3 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row py-4">
+                                    <div class="col m-0 p-0">
+                                        <img src="images/tvshows7.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies8.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies9.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies10.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row py-4">
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next ms-5 ps-5" type="button"
+                            data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="container">
+                    <h3 class="color_darkgray fontsize24 color_darkgray fw-lighter pt-4 ps-3 ">Top Documentaries </h3>
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row mx-2 py-4">
+                                    <div class="col m-0 p-0">
+                                        <img src="images/doc1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Money Hesist
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 3.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/doc2.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/doc3.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Prehistoric Planet
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/doc4.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">The Walking Dead Origins
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 3.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/doc5.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold"> 
+                                            Legends
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.6 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/doc6.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">
+                                            Assembled
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row py-4">
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies7.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies8.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies9.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies10.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row py-4">
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col m-0 p-0">
+                                        <img src="images/movies1.jpg" class="moviebanner rounded-4" alt="">
+                                        <p class="p-0 m-0 fontsize15 color_darkgray pt-4 fw-bold">Jurasic World Domi..
+                                        </p>
+                                        <div class="color_lightgray color_lightgray fontsize13 ">
+                                            <span>
+                                                2022 7.1 <i class="fa-solid fa-star text-warning fontsize10"></i>
+                                            </span>
+
+                                            <button
+                                                class="btn btn-outline-secondary rounded-1 p-0 fontsize10 px-1 mx-2">movie</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next ms-5 ps-5" type="button"
+                            data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <script>
+          let menu = document.getElementById("menu");
+            let content = document.getElementById("content");
+            let menuin = document.getElementById("menuin");
+            let menuback = document.getElementById("menuback");
+            let menusingle = document.getElementById("menusingle");
+            let menudetail = document.getElementById("menudetail");
+            let banner = document.getElementById("banner1");
+        function btnmenufull() {
+          
+
+
+
+
+            menu.style.maxWidth = "20%";
+            content.style.maxWidth = "80%";
+            menu.style.transition="0.5s"
+
+            menudetail.style.display = "block";
+            menusingle.style.display = "none";
+            menuin.style.display = "none";
+            menuback.style.display = "block";
+            banner.style.paddingLeft="10px"
+            
+        }
+        function btnmenuback() {
+           
+
+
+            menu.style.maxWidth = "10%";
+            content.style.maxWidth = "90%";
+            menudetail.style.display = "none";
+            menusingle.style.display = "block";
+            menuin.style.display="block";
+            menuback.style.display="none";
+            
+
+
+
+        }
+    </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+        <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- <script type="text/javascript" src="slick/slick.min.js"></script>   -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
+<script src="slick-1.8.1/slick/slick-1.8.1/slick/slick.js"></script>
+<script>
+
+
+// $(document).ready(function(){
+//   $('.single-item').slick({
+// Boolean:false
+//   });
+// });
+
+
+
+$('.single-item').slick();
+
+
+$('.multiple-items').slick({
+infinite: true,
+slidesToShow: 4,
+slidesToScroll: 3
+});
+            
+
+$('.responsive').slick({
+dots: true,
+infinite: false,
+speed: 300,
+slidesToShow: 4,
+slidesToScroll: 4,
+responsive: [
+{
+  breakpoint: 1024,
+  settings: {
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    infinite: true,
+    dots: true
+  }
+},
+{
+  breakpoint: 600,
+  settings: {
+    slidesToShow: 2,
+    slidesToScroll: 2
+  }
+},
+{
+  breakpoint: 480,
+  settings: {
+    slidesToShow: 1,
+    slidesToScroll: 1
+  }
+}
+// You can unslick at a given breakpoint now by adding:
+// settings: "unslick"
+// instead of a settings object
+]
+});
+
+let promo=document.getElementsByClassName("slick-next");
+console.log(promo);
+promo[0].style.color="white";
+promo[0].style.width="30px";
+let prev=document.getElementsByClassName("slick-prev");
+console.log(prev);
+prev[0].style.color="white";
+prev[0].style.width="30px";
+
+</script>
+</body>
+
+</html>

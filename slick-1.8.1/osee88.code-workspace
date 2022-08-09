@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\githubfiles\\osee88"
+		},
+		{
+			"path": "..\\images"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "slick-1.8.1"
+	}
+}

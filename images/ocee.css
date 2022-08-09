@@ -1,0 +1,117 @@
+.color_darkgray{
+    color: #2f2f33;
+}
+.color_lightgray{
+    color: #6c757d;
+}
+.zin{
+    z-index: 3;
+}
+body{
+font-family: sans-serif;
+}
+.fontsize30{
+font-size: 30px;
+}
+.fontsize10{
+    font-size: 10px;
+    }
+    .fontsize11{
+        font-size: 11px;
+        }
+.fontsize24{
+    font-size: 24px;
+    }
+.fontsize27{
+    font-size: 27px;
+    }
+    .fontsize15{
+        font-size: 15px;
+        }
+        .fontsize13{
+            font-size: 13.5px;
+            }
+ .fontsize12{
+            font-size: 12px;
+            }
+.bgblue{
+    background-color: #31aabc;
+    
+}
+.buttonbgcolor{
+    background-color: rgba(21,13,13,.44);
+
+}
+.bgimgbanner1{
+    background-image: url(images/banner1.webp);
+    background-size: 40%;
+    background-repeat:no-repeat;
+    background-position-x:50% ;
+    background-position-y:100%;
+}
+.bgimgbanner2{
+    background-image: url(images/banner2.webp);
+    background-size: 35%;
+    background-repeat:no-repeat;
+    background-position-x:90% ;
+    background-position-y:100%;
+
+
+}
+.bgimgbanner3{
+    background-image: url(images/avatarbg.webp);
+    background-size: 28%;
+    background-repeat:no-repeat;
+    background-position-x:90% ;
+    background-position-y:90%;
+
+
+}
+.playbuttoimg{
+    height: 60px;
+    width: 60px;
+   
+}
+.moviebanner{
+    height: 165;
+    width: 90%;
+}
+.moviebanner:hover{
+    transform: scale(1.1);
+    border: 1px solid black;
+}
+.navbarposition{
+    position:relative;
+    left: 0px;
+    
+}
+.menubarwidth{
+    max-width: 10%;
+    height: 100vh;
+    
+}
+.height{
+    height:78%;
+}
+.contentwidth{
+    max-width: 90%;
+}
+#menuback{
+    display: none;
+}
+#menudetail{
+    display: none;
+}
+.bgtransperent{
+    background-color: rgba(255, 255, 255, 0.827);
+}
+.slick-next:before {
+    content: ">";
+    color:#6c757d !important; 
+    font-size: 25px;
+}
+.slick-prev:before {
+    content: "<";
+    color:#6c757d !important; 
+    font-size: 25px;
+}
